@@ -8,8 +8,8 @@
 include ('lib/simplehtmldom_1_5/simple_html_dom.php');
 
 
-if(isset($_GET['url']) && $_GET['url'] !== "") :
-    $url = $_GET['url'];
+if(isset($_POST['url']) && $_POST['url'] !== "") :
+    $url = $_POST['url'];
     $dom = file_get_html($url);
     $jsonArray = array();
     $image_url = "";
@@ -44,5 +44,7 @@ if(isset($_GET['url']) && $_GET['url'] !== "") :
 //    foreach($metas as $meta) {
 //        echo  '<img src="' . $meta->content . '" />';
 //    }
+else:
+    echo 'I am here';
 endif;
 ?>
