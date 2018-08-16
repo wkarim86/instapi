@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>InstaPhoto Download</title>
+    <title>InstaPhoto Downloader</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">    
     <style type="text/css">
@@ -14,13 +14,22 @@
         .download{margin: 10px 0px; padding: 10px 40px; font-size: 20px; font-weight: 300; border-radius: 4px; background: #1bb393; color: #fff; box-shadow: 0px 2px 3px 0px #00000029; cursor: pointer;}
         .download:hover{background: #049978;}
     </style>
+    
+    <link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="InstaPhoto Downloader">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
 
 </head>
 <body>
 <div class="container">
-    
+   
    <div class="box">
-       <form action="download.php" method="post">
+        <img src="images/icons/icon-128x128.png" title="InstaPhoto Downloader">
+       <form action="download.php" method="post">           
            <h3>Instagram Photo Download</h3>
            <input type="text" name="url" placeholder="https://www.instagram.com/p/BVK0u81DSID/" />
            <button type="submit" class="download">Download</button>
